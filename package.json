@@ -1,0 +1,27 @@
+{
+  "name": "multi-tenant-rls-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "db:setup": "docker-compose up -d && sleep 3 && docker-compose exec -T postgres psql -U postgres -d tenant_db -f schema.sql && docker-compose exec -T postgres psql -U postgres -d tenant_db -f seed.sql",
+    "test": "jest --runInBand"
+  },
+  "dependencies": {
+    "next": "^14.2.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "pg": "^8.11.5",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/pg": "^8.11.4",
+    "@types/react": "^18.3.0",
+    "typescript": "^5.4.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2"
+  }
+}
