@@ -1,0 +1,16 @@
+# Ignore node dependencies
+node_modules/
+.next/
+
+
+# Ignore log files and environment variables
+*.log
+.env
+.env.local
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore build directories
+dist/
+build/
