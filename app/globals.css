@@ -13,6 +13,19 @@ h1 { font-size: 1.6rem; margin: 28px 0 12px; } h2 { font-size: 1.25rem; margin: 
 a { color: var(--accent); } small, .muted { color: var(--muted); }
 code { background: var(--accent-soft); padding: 1px 6px; border-radius: 6px; }
 
+.header-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.header-title a{
+  text-decoration: none;
+}
+.select-div{
+  width: 100px;
+}
+
 .topbar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 14px; }
 .topbar button { margin-left: auto; }
 .card { max-width: 420px; margin: 12vh auto 0; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 28px; box-shadow: 0 6px 24px rgba(20, 24, 40, .07); }

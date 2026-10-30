@@ -1,5 +1,13 @@
 import './globals.css';
-export const metadata = { title: 'Tenant notes' };
+import Navbar from '@/components/Header/navbar';
+export const metadata = { title: 'Multi Tenant notes' };
+
 export default function Root({ children }: { children: React.ReactNode }) {
-  return <html lang="en"><body>{children}</body></html>;
+  return <html lang="en">
+    <body> 
+      <Navbar />
+      
+      {children}
+    </body>
+    </html>
 }

@@ -105,10 +105,10 @@ export default function WorkspacePage() {
   return (
     <main>
       <header className="topbar">
-        <select value={wid} onChange={(e) => router.push(`/w/${e.target.value}`)} aria-label="Workspace">
+        <select className="select-div" value={wid} onChange={(e) => router.push(`/w/${e.target.value}`)} aria-label="Workspace" >
           {me.data?.workspaces.map((w) => <option key={w.id} value={w.id}>{w.name}</option>)}
-        </select>{' '}
-        {ws.loading ? 'Loading…' : <>role: <b>{role}</b></>} · {me.data?.user.name}{' '}
+        </select>
+        {ws.loading ? 'Loading…' : <>role: <b>{role}</b></>} · {me.data?.user.name}
         <button onClick={async () => { await fetch('/api/logout', { method: 'POST' }); router.push('/'); }}>Sign out</button>
       </header>
       <h1>Projects</h1>
